@@ -1,0 +1,285 @@
+
+html, 
+body {
+    margin: 0; 
+    padding: 0;
+    box-sizing:border-box;
+    font-family: '서울남산 장체B'
+}
+
+a {
+    text-decoration: none
+}
+
+
+.wrapper {
+    display: flex; 
+    flex-direction: column
+}
+.container{
+    width: 80%;
+    margin: 0 auto
+}
+
+h1,h2 {
+    margin:0;
+    padding: 0;
+    line-height: 1
+}
+
+h1 {
+    font-size: 90px;
+        margin-bottom: 1.5em;
+}
+
+h2 {
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+
+/* media */
+
+.media {
+    z-index: 10;
+    position: absolute; 
+    left:2rem;
+    bottom: 2rem; 
+    display: flex; 
+    flex-direction: column
+}
+
+ion-icon {
+  font-size: 40px;
+}
+
+ion-icon {
+  color:black;
+}
+
+.meaia li {
+    margin-top: 1rem;
+    opacity: 0;
+    animation: moveDown .2s forwards;
+}
+.media li:nth-child(1) {
+    animation-delay: 1s
+}
+.media li:nth-child(2) {
+    animation-delay: 1.1s
+}
+.media li:nth-child(3) {
+    animation-delay: 1.2s
+}
+
+.media li a {
+    color:black
+}
+
+ul {
+    list-style: none; 
+    margin: 0; 
+    padding: 0
+}
+
+/*header*/
+
+header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: black;
+   
+   
+}
+header a {
+    font-family: 'Poppins'
+    sans-serif;
+    color: white;
+}
+header .menu {
+    display: flex;
+}
+header .menu li {
+    opacity: 0;
+    margin-left: 2rem; 
+    animation: moveDown .2s forwards
+
+}
+header .menu li:nth-child(1) {
+    animation-delay: .1s
+}
+header .menu li:nth-child(2) {
+    animation-delay: .3s
+}
+header .menu li:nth-child(3) {
+    animation-delay: .5s
+}
+
+/* intro */
+
+section.intro {
+    width: 100%; 
+    height: 100vh; 
+    overflow: hidden;
+}
+section.intro video {
+    width:100%;
+    height:100%;
+}
+section.intro .title {
+    position: absolute;
+    top: 25%;
+    left:15%;
+    color:black;
+}
+section.intro .title h1{
+    overflow: hidden;
+    font-family: 'Poppins-Medium'
+        src:url('Poppins-Medium.ttf');
+    text-transform: uppercase;
+    font-size: 150px;
+    margin-bottom: 1rem;
+    
+}
+section.intro .title h1 span{
+    opacity: 0;
+    animation: moveUp .8s forwards;
+    animation-delay: .2s;
+    display: block
+}
+   
+section.intro .title h2{
+    font-family: 'Poppins-Medium'
+        src:url('Poppins-Medium.ttf');
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 15px;
+    margin-bottom: 2rem
+}
+
+section.intro .title h2 span{
+    opacity: 0;
+    animation: moveUp .8s forwards;
+    animation-delay: .5s;
+    display: block;
+
+}
+
+/* about */
+ .about {
+    opacity: 0;
+    width: 60%;
+    align-self:flex-end;
+    background: white;
+    margin-top: -8rem;
+    padding: 4rem; 
+    z-index: 2;
+    animation: moveLeft 1.6s;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+    
+}
+
+/* slick slider */
+section.slick-slider {
+    width: 60vw;
+    height: 500px;
+    margin-top: -2rem;
+    margin-left: 5%;
+    z-index: 10;
+    overflow: hidden
+}
+section .work{
+    justify-content: center;
+    align-items: center;
+}
+section .work .poster div {
+   flex: 1 auto;
+    margin: 2rem;
+    color: white;
+    height:60vh;
+    background-size: contain;
+}
+section .work .poster .graphic {
+   background:url(./poster.jpg) no-repeat center;  
+}
+section .work .poster .type {
+   background:url(./poster.jpg) no-repeat center;  
+}
+
+section .h1{
+    overflow: hidden;
+    font-family: 'Poppins-Medium'
+        src:url('Poppins-Medium.ttf');
+    text-transform: uppercase;
+    font-size: 150px;
+    margin-bottom: 1rem;
+    
+}
+section .h1 span{
+    opacity: 0;
+    animation: moveUp .8s forwards;
+    animation-delay: .2s;
+    display: block
+    
+}
+
+@keyframes moveDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+    
+    @keyframes moveUp {
+        0% {
+        opacity: 0;
+        transform: translateY(120%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+
+        @keyframes moveRight {
+        0% {
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+            
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+
+@keyframes moveLeft {
+        0% {
+        opacity: 0;
+        transform: translateY(30px)
+    }
+            
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+@font-face {
+    font-family:'NanumSquare_acB';
+        src: url('./Font/NanumSquare_acB.ttf')
+}
